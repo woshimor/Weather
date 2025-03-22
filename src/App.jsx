@@ -2,9 +2,11 @@ import { useEffect, useState } from "react"
 import {IconButton, TextField, Typography, Grid} from "@mui/material"
 import "./App.css"
 import {FiSearch} from "react-icons/fi"
+import { TiWeatherPartlySunny } from "react-icons/ti";
 import sunnyImg from "./assets/images/sunny.jpg"
 import rainImg from "./assets/images/rain.jpg"
 import cloudImg from "./assets/images/cloud.jpg"
+import snowImg from "./assets/images/snow.jpg"
 import axios from "axios"
 
 const App = () => {
@@ -50,6 +52,9 @@ const App = () => {
 
       case "Clouds":
         return cloudImg
+
+      case "Snow":
+        return snowImg
     
       default:
         return sunnyImg
@@ -62,12 +67,12 @@ const App = () => {
 
   return (
     <div className="app-container" style={{
-      background: `URL(${setImg()})`,
+      background: `URL(${setImg()}) center / cover no-repeat`,
       }}>
       <div className="app">
-        <Typography textAlign="center" variant="h1" fontSize={48} color="#fff">Weather</Typography>
+        <Typography textAlign="center" variant="h1" fontSize={48} color="#fff">Weather <TiWeatherPartlySunny/></Typography>
         <form className="form" onSubmit={onSubmit}>
-          <div className="search-box">
+          <div className="search-box" >
             <TextField 
               label="search city" 
               type="text" 

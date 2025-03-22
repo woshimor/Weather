@@ -36,6 +36,7 @@
 
 .search-box{
     position: relative;
+    color: #fff;
     width: 500px;
 }
 .search-box .search__btn{
@@ -51,7 +52,7 @@
 }
 
 .search-box fieldset {
-    border-right-color: #fff !important;
+    border-color: #fff !important;
 }
 
 .search-box input{
@@ -65,4 +66,13 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+p{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-transform: uppercase;
+
 }
